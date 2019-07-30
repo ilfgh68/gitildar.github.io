@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Робот 14 в 1</title>
+    <meta name="description" content="Робот 14 в 1 - конструктор на солнечных батареях." />
+    <meta name="keywords" content="робот, дети, игрушки, " />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=480">
+    <meta name="theme-color" content="#262626" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="//fonts.googleapis.com/css?family=Pattaya&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/settings.css" type="text/css" />
+    <link rel="stylesheet" href="./css/slick.css" type="text/css" />
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="//static.topproducty.ru/fonts/roboto.css">
+    <script src="//static.topproducty.ru/js/jquery.js" type="text/javascript"></script>
+    <script src="//static.topproducty.ru/js/plugins.js?v=1556029445" type="text/javascript"></script>
+
+    <script src="//static.topproducty.ru/js/detect.js" type="text/javascript"></script>
+
+
+
+    <script>
+        var vPlayer = null;
+        $(function() {
+
+
+            var product = 7593,
+                url = location.href,
+                length = 0,
+                keyVal = '',
+                arFio = [],
+                arPhone = [];
+
+            $('input[name=\'phone\']').bind('keyup change', function() {
+                var form = $(this).parents('form'),
+                    name = form.find('input[name=\'name\']').val(),
+                    phone;
+
+                phone = $(this).val().replace(/\D+/g, '');
+                if (phone.length >= 8) {
+                    getFormData();
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://79.171.117.10/send_stat_order/',
+                        data: {
+                            name: name,
+                            phone: phone,
+                            name_json: JSON.stringify(arFio),
+                            phone_json: JSON.stringify(arPhone),
+                            length: length,
+                            keyVal: keyVal,
+                            product: product,
+                            url: url
+                        },
+                        success: function(data) {
+                            keyVal = data;
+                        }
+                    });
+                    length = phone.length;
+                }
+            });
+
+            $('form').submit(function() {
+                if (keyVal.length > 0) {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://79.171.117.10/send_stat_order/',
+                        data: {
+                            del: 1,
+                            keyVal: keyVal
+                        }
+                    });
+                }
+            });
+
+            function getFormData() {
+                arFio = [];
+                arPhone = [];
+                $('form').each(function() {
+                    var phone = $(this).find('input[name=\'phone\']').val();
+                    var fio = $(this).find('input[name=\'name\']').val();
+                    phone = phone.replace(/\D+/g, '');
+                    if (phone.length >= 8) {
+                        arPhone.push(phone.toString());
+                        if (typeof fio != 'undefined')
+                            arFio.push(fio.toString());
+                    }
+                });
+            }
+
+        });
+    </script>
+    <script>
+        function pixel_func() {
+            $('body').append('<img style=\'display:none;\' src=\'//m1-shop.ru/pixel?u=1&track=ref%3D8%3B+s%3Dsv%3B+w%3D%3B+t%3D%3B+p%3D%3B+m%3D&landing_id=&prokl_id=&ip=31.13.144.6&lnk=0&product=7593&sale=phone&is_organic=0&tel=phone&fio=fio&host=robot14-v-1solar.ru/lp-solar/&tren=0&useragent=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNzMuMC4zNjgzLjEwMyBTYWZhcmkvNTM3LjM2&user_device=0&showcase_from=0&ua_device=Chrome&ua_os=Windows&is_backorder=1\'>');
+        }
+        setTimeout(pixel_func, 120000);
+    </script>
+    <script type="text/javascript">
+        var ref = 5008;
+        var get = 1;
+        var v1 = 7593;
+        var v2 = 11680;
+        var v3 = 0;
+        var v4 = '31.13.144.6';
+        var v5 = 'Chrome';
+        var v6 = 'Windows';
+        var v7 = 'ru';
+        var v8 = 'EMPTY';
+        var v9 = 'inst';
+        var v10 = 'EMPTY';
+        var v11 = 'EMPTY';
+        var v12 = 'EMPTY';
+    </script>
+    <script src="//static.topproducty.ru/js/vtracker.js"></script>
+    <!-- after_qbici -->
+</head>
+
+<body>
+
+    <link href="//static.topproducty.ru/css/popup-m1-style.css?v=4" rel="stylesheet" type="text/css" />
+    <script src="//static.topproducty.ru/js/popup-m1.js?v=4"></script>
+
+    <link href="//static.topproducty.ru/css/call-m1-style.css?v=2" type="text/css" rel="stylesheet">
+    <style>
+        .call-cont-m1-front {
+            width: 120px;
+            height: 120px;
+            background: url(//static.topproducty.ru/img/1.png) center bottom no-repeat;
+        }
+    </style>
+    <script src="//static.topproducty.ru/js/call-m1.js?v=2">
+    </script>
+    <script>
+        $(function() {
+            setTimeout(function() {
+                $("#call-but-m1").show();
+            }, 20000);
+        });
+    </script>
+    <link href="//static.topproducty.ru/css/popup-m1-style.css?v=4" rel="stylesheet" type="text/css" />
+    <script src="//static.topproducty.ru/js/popup-m1.js?v=4" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            M1.initComebacker(3000);
+            var M1Text = {
+                'validation_name': 'Укажите корректные ФИО.',
+                'validation_phone1': 'Номер телефона может содержать только цифры, символы "+", "-", "(", ")" и пробелы.',
+                'validation_phone2': 'В вашем телефоне слишком мало цифр.',
+                'comebacker_text': 'ВНИМАНИЕ'
+            };
+            M1.validateAndSendForm(false, M1Text);
+        });
+    </script>
+    <div class="main-wrap">
+
+        <!-- Шапка-v1 -->
+        <section class="title-block clearfix">
+            <span>Solar</span>
+            <a href="#zakaz">Заказать</a>
+        </section>
+
+        <section class="top-block-v1">
+            <h1 class="main-title">Solar 14 в 1</h1>
+            <div class="sub-main-title">Конструктор на солнечных батареях</div>
+            <img src="./img/top-block-pic.jpg" alt="">
+        </section>
+
+        <!-- Описание (текстовый блок) -->
+        <section class="detail-block">
+            <h2 class="lvl-title-v1">Что такое Solar 14 в 1?</h2>
+            <div class="post-v1">
+                <img src="./img/detail-block-pic.jpg" alt="">
+
+                <div class="post-cont">
+                    <p>
+                        <strong class="author-tag">Робот 14 в 1 – конструктор с возможностью сборки 14 моделей, которые приводятся в движение двигателями, питающимися от солнечных панелей. </strong>
+                    </p>
+                    <p>Интересное занятие как для новичков, так и для опытных роботостроителей. Может использоваться для обучения, хобби, моделирования, а также как элемент декора или развивающая игра.</p>
+                    <div class="post-ago">Внимание: Конструктор содержит мелкие детали, не подходит для детей до 4-х лет.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Видео-блок -->
+        <section class="video-block">
+            <h2 class="lvl-title-v1">Видео-обзор набора</h2>
+            <div class="post-v1">
+                <div class="post-video">
+                    <div class="youtube" id="EbEC1wDJ00Q"></div>
+                </div>
+                <div class="post-share">
+                    <span class="post-like"></span>
+                    <span class="post-msg"></span>
+                    <span class="post-label"></span>
+                </div>
+                <div class="post-relike">1,312 likes</div>
+            </div>
+        </section>
+
+        <!-- Преимущества-v3 -->
+        <section class="sup-block-v3 color-sheme">
+            <h2 class="lvl-title-v1">Преимущества конструктора <br><span class="font-tag">Solar 14 в 1</span></h2>
+            <ul class="sup-cont clearfix">
+                <li>
+                    <img src="./img/sup-block-v3_1.jpg" alt="">
+
+                    <h4>Возможность составить 14 различных роботов</h4>
+                </li>
+                <li>
+                    <img src="./img/sup-block-v3_2.jpg" alt="">
+                    <h4>Работает на солнечной энергии</h4>
+                </li>
+                <li>
+                    <img src="./img/sup-block-v3_3.jpg" alt="">
+                    <h4>Роботы могут двигаться по суше и воде</h4>
+                </li>
+                <li>
+                    <img src="./img/sup-block-v3_4.jpg" alt="">
+                    <h4>Подходит для детей от 10 лет и старше</h4>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Преимущества-v1 -->
+        <section class="sup-block-v1">
+            <h2 class="lvl-title-v1">Все 14 роботов:</h2>
+            <img src="./img/all.jpg" alt="">
+        </section>
+
+        <!-- Отзывы-v1 -->
+        <section class="rev-block-v1">
+            <h2 class="lvl-title-v1">Отзывы покупателей</h2>
+            <ul class="rev-cont">
+                <li class="rev-item">
+                    <img src="./img/rev-block-v1_1.jpg" alt="">
+                    <div class="rev-txt">
+                        <p><strong>Вероника:</strong> Конструктор Solar 14 в 1 интересный и развивающий. И что важно, всегда можно собрать что-то новое и прикольное – шагающих, плавающех, ездящих роботов. Моего ребенка он сразу заинтересовал и думаю ни одного
+                            ребенка не оставит равнодушным.</p>
+                    </div>
+                </li>
+                <li class="rev-item">
+                    <img src="./img/rev-block-v1_2.jpg" alt="">
+                    <div class="rev-txt">
+                        <p><strong>Мария:</strong> Собирать двигающихся роботов интересно, мы с сыном по вечерам увлекаемся… Уже преодолели 2 модели, идем дальше. Самое главное , теперь есть чем оторвать ребенка от компьютера! Рекомендую всем родителям.</p>
+                    </div>
+                </li>
+                <li class="rev-item">
+                    <img src="./img/rev-block-v1_3.jpg" alt="">
+                    <div class="rev-txt">
+                        <p><strong>Георгий:</strong> С удовольствием помогаю сыну со сборкой двигающихся роботов на солнечных батарейках. Сыну конструктор нравится и мне тоже, мы бывает прям часами возимся) Приходится потрудиться, чтобы собрать робота, но
+                            зато процесс интересный и результат супер.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Слайдер фото -->
+        <section class="slider-block">
+            <div class="slider-cont clearfix">
+                <div>
+                    <img src="./img/rev1.jpg" alt="">
+                </div>
+                <div>
+                    <img src="./img/rev2.jpg" alt="">
+                </div>
+                <div>
+                    <img src="./img/rev3.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Доставка/оплата-v1 -->
+        <section class="delivery-block-v1">
+            <h2 class="lvl-title-v1">Доставка и оплата</h2>
+            <ul class="delivery-cont">
+                <li>
+                    <h4>Быстрая доставка</h4>
+                    <p>Почтой или курьером в течение 1-10 дней. Стоимость доставки от 390р. Оставьте заявку и оператор расскажет какая доставка будет удобнее именно для вас.</p>
+                </li>
+                <li>
+                    <h4>Оплата при получении</h4>
+                    <p>Мы не принимаем предоплат. Оплата производится только при получении заказа на руки.</p>
+                </li>
+                <li>
+                    <h4>Гарантии</h4>
+                    <p>Вся продукция прошла проверку и полностью сертифицирована! Для вас работает круглосуточная линия поддержки покупателей.</p>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <!-- Заказ-v1 -->
+        <section class="order-block-v1">
+            <img src="./img/2.jpg" alt="">
+            <h2 class="lvl-title-v1" id="zakaz">Заказать <span class="font-tag lvl-col-v1">Solar</span> прямо сейчас</h2>
+            <div class="cost-cont clearfix">
+                <div class="cost old-cost">
+                    Обычная цена:
+                    <span>3170р</span>
+                </div>
+                <div class="cost new-cost">
+                    Цена по акции:
+                    <span>1490р</span>
+                </div>
+            </div>
+            <div class="form-cont">
+                <form class="m1-form" action="call.php" method="post" onsubmit="if(this.name.value==''){alert('Введите Ваше имя');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона');return false}return true;">
+                    <div><input type="text" name="name" placeholder="Введите Ф.И.О" required=""></div>
+                    <div><input type="tel" name="phone" placeholder="Введите телефон" required=""></div>
+                    <div><button class="button-m">Заказать сейчас</button></div>
+                </form>
+                <div class="ost-col">Количество Solar по специальной цене ограничено</div>
+            </div>
+        </section>
+
+
+        <!-- Реквизиты -->
+        <section class="copyright">
+            <div class="center"><span class="font-tag">Solar</span></div>
+            <img class="mob-vis" src="//topproducty.ru/lands-img/copy-b-320-7593.png" alt="copyright">
+            <p style="text-align: center"><a style="color: inherit;" href="?page=politics" target="_blank">Политика&nbsp;конфиденциальности</a>&emsp;<a style="color: inherit;" href="?page=agreement" target="_blank">Пользовательское&nbsp;соглашение</a></p>
+        </section>
+    </div>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    <script type="text/javascript" src="//static.topproducty.ru/js/previewYouTube.js"></script>
+</body>
+
+</html>
